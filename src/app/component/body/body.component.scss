@@ -1,0 +1,20 @@
+.body {
+  display: flex;
+  width: 100%;
+  height: 76vh; /* Ajustar altura para 80% da viewport */
+  overflow: hidden; /* Evitar barra de rolagem */
+}
+
+.content {
+  flex-grow: 1;
+  padding: 10px; /* Ajuste o padding conforme necessário */
+  transition: margin-left 0.3s; /* Transição suave */
+  overflow-y: auto; /* Permitir rolagem vertical apenas no conteúdo */
+}
+
+@media (max-width: 768px) {
+  .frame-container {
+    margin: 15px;
+    padding: 5px;
+  }
+}

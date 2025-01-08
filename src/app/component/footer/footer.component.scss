@@ -1,0 +1,16 @@
+.footer {
+  background-color: #f8f9fa;
+  padding: 2px;
+  text-align: center;
+  width: 100%;
+  height: 10vh; /* Ajustar altura para 10% da viewport */
+  border: 2px solid #333; /* Borda mais escura e grossa */
+  box-sizing: border-box;
+  margin-top: auto; /* Empurra o footer para o final do container flex */
+}
+
+.footer p {
+  margin: 0;
+  font-size: 14px;
+  line-height: 10vh;
+}

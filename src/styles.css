@@ -1,0 +1,35 @@
+/* ...existing code... */
+body {
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+  margin: 0;
+  max-width: 480px; /* Largura típica de um celular */
+  width: 100vw; /* Largura total da viewport */
+  height: 100vh; /* Altura total da viewport */
+}
+
+main {
+  flex: 1;
+}
+
+.logo {
+  /* Certifique-se de que não há regras que ocultem a imagem */
+  display: block;
+  width: auto;
+  height: auto;
+}
+
+.header-image {
+  width: 100%;
+  height: auto; /* Ajustar a altura automaticamente */
+  max-height: 20vh; /* Limitar a altura máxima para um quinto da altura da tela */
+  object-fit: cover;
+}
+
+.main-content {
+  width: 100%;
+  height: 100%;
+  flex: 1; /* Garantir que o conteúdo principal ocupe o espaço restante */
+}
+/* ...existing code... */

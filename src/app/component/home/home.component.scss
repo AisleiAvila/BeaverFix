@@ -1,0 +1,179 @@
+.main-content {
+  display: flex; // Define o layout flexível
+  flex-direction: column; // Define a direção dos itens como coluna
+  flex-grow: 1; // Permite que o container cresça para preencher o espaço disponível
+  overflow: hidden; // Impede a rolagem vertical na container
+  margin-left: 5px; // Define a margem esquerda
+}
+
+.background-image {
+  position: fixed; // Define a posição fixa
+  top: 0; // Define a posição no topo
+  left: 0; // Define a posição à esquerda
+  width: 100vw; // Define a largura como 100% da viewport
+  height: 100vh; // Define a altura como 100% da viewport
+  object-fit: cover; // Ajusta a imagem para cobrir o container
+  z-index: -1; // Define a ordem de empilhamento
+  max-width: 100%; // Garantir que a largura não ultrapasse a tela
+  max-height: calc(100vh - 10vh); // Garantir que a altura não ultrapasse a tela
+}
+
+.overlay {
+  position: relative; // Define a posição relativa
+  z-index: 1; // Define a ordem de empilhamento
+  color: white; // Define a cor do texto como branco
+  text-align: center; // Centraliza o texto
+  padding-top: 1rem; // Adiciona padding-top para aproximar do header
+  display: flex; // Define o layout flexível
+  flex-direction: column; // Define a direção dos itens como coluna
+  align-items: center; // Centraliza os itens
+  gap: 0.25rem; // Reduzir o espaçamento entre os elementos
+}
+
+section {
+  text-align: center; // Centraliza o texto
+}
+
+h2 {
+  font-size: 24px; // Define o tamanho da fonte
+  color: blueviolet; // Define a cor do texto
+  margin-top: 0; // Remove a margem superior
+}
+
+p {
+  font-size: 16px; // Define o tamanho da fonte
+  color: blueviolet; // Define a cor do texto
+}
+
+button {
+  background-color: #007bff; // Cor de fundo do botão
+  border: none; // Remover borda
+  color: white; // Cor do texto
+  padding: 10px 20px; // Espaçamento interno
+  text-align: center; // Centralizar texto
+  text-decoration: none; // Remover sublinhado
+  display: inline-flex; // Exibir como flexível em linha
+  align-items: center; // Alinhar itens ao centro
+  font-size: 16px; // Tamanho da fonte
+  margin-top: 10px; // Margem superior
+  cursor: pointer; // Cursor de ponteiro ao passar o mouse
+  border-radius: 5px; // Bordas arredondadas
+  transition: background-color 0.3s; // Transição suave para a cor de fundo
+
+  img {
+    margin-right: 10px; // Espaçamento à direita da imagem
+    width: 20px; // Largura da imagem
+    height: 20px; // Altura da imagem
+  }
+
+  &:hover {
+    background-color: #0056b3; // Cor de fundo ao passar o mouse
+  }
+}
+
+.login-container {
+  display: flex; // Define o layout flexível
+  flex-direction: column; // Define a direção dos itens como coluna
+  align-items: center; // Centraliza os itens
+  cursor: pointer; // Cursor de ponteiro ao passar o mouse
+  margin-top: 10px; // Margem superior
+
+  img {
+    width: 50px; // Define a largura da imagem
+    height: 50px; // Define a altura da imagem
+    margin-bottom: 5px; // Espaçamento inferior
+  }
+
+  p {
+    font-size: 16px; // Define o tamanho da fonte
+    color: blueviolet; // Define a cor do texto
+    margin: 0; // Remove a margem
+  }
+}
+
+.carousel {
+  display: flex; // Define o layout flexível
+  overflow-x: hidden; // Permite rolagem horizontal
+  scroll-snap-type: x mandatory; // Define o tipo de snap para rolagem
+  gap: 0.25rem; // Diminui o espaçamento entre os itens
+  padding: 1rem 0; // Espaçamento interno
+  width: 100%; // Largura total
+  max-width: 100%; // Garantir que a largura não ultrapasse a largura da classe .main-content
+}
+
+.carousel-item {
+  flex: 0 0 38%; // Define a flexibilidade do item para ocupar metade da largura da classe .carousel
+  scroll-snap-align: start; // Alinha o item no início
+  background-color: white; // Cor de fundo
+  border-radius: 10px; // Bordas arredondadas
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); // Sombra do box
+  padding: 1rem; // Espaçamento interno
+  text-align: center; // Centraliza o texto
+}
+
+.card {
+  font-size: 16px;
+  color: blueviolet;
+}
+
+.carousel-dots {
+  display: flex;
+  justify-content: center;
+  gap: 0.25rem; // Diminui o espaçamento entre os pontos
+  margin-top: 1rem;
+}
+
+.carousel-dots span {
+  width: 10px;
+  height: 10px;
+  background-color: gray;
+  border-radius: 50%;
+  cursor: pointer;
+}
+
+.carousel-dots span.active {
+  background-color: blueviolet;
+}
+
+/* Estilos responsivos */
+@media (max-width: 480px) {
+  .main-content {
+    padding: 5px; // Define o padding
+  }
+
+  h2 {
+    font-size: 20px; // Define o tamanho da fonte
+  }
+
+  p {
+    font-size: 14px; // Define o tamanho da fonte
+  }
+
+  .carousel-item {
+    flex: 0 0 38%; // Define a flexibilidade do item para ocupar metade da largura da classe .carousel em dispositivos móveis
+  }
+}
+
+@media (min-width: 481px) and (max-width: 768px) {
+  .main-content {
+    padding: 8px; // Define o padding
+  }
+
+  h2 {
+    font-size: 22px; // Define o tamanho da fonte
+  }
+
+  p {
+    font-size: 15px; // Define o tamanho da fonte
+  }
+
+  .carousel-item {
+    flex: 0 0 38%;
+  }
+}
+
+@media (min-width: 769px) {
+  .carousel-item {
+    flex: 0 0 30%;
+  }
+}
