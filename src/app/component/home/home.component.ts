@@ -2,7 +2,6 @@ import { CommonModule } from '@angular/common';
 import { Component, OnInit, ViewChild, ElementRef } from '@angular/core';
 import { Router, RouterModule } from '@angular/router';
 import { TranslateModule } from '@ngx-translate/core';
-
 @Component({
   selector: 'app-home',
   templateUrl: './home.component.html',

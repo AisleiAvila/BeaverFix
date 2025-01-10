@@ -23,6 +23,8 @@
   display: flex;
   gap: 10px;
   align-items: center;
+  margin-right: 15px;
+
   .flag-icon {
     width: 24px;
     height: 24px;
@@ -31,7 +33,10 @@
 
     &:hover {
       transform: scale(1.1);
-      transition: transform 0.2s ease;
     }
   }
+}
+
+.logo-image {
+  margin-left: 10px; /* Adiciona um espaço de 5px à esquerda da imagem */
 }
