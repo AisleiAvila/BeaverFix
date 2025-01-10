@@ -1,40 +1,41 @@
-<div class="overlay">
-  <h2>
-    {{ "LABLE_BEM_VINDO" | translate }} {{ "LABLE_AO" | translate }}
-    {{ "LABLE_APP_NAME" | translate }}
-  </h2>
-  <p>Sua vida mais simples e organizada começa aqui.</p>
-  <p>
-    No BeaverFix, conectamos você aos melhores profissionais de serviços
-    domésticos e especializados, com praticidade, segurança e qualidade.
-  </p>
-</div>
 <div class="main-content">
-  <section>
-    <img
-      src="assets/images/Ondulacao.jpg"
-      alt="Ondulação"
-      class="background-image"
-    />
-    <div class="carousel" #carousel>
-      <div
-        class="carousel-item"
-        *ngFor="let item of carouselItems; let i = index"
-      >
-        <img [src]="'assets/icons/' + item.image" alt="{{ item.name }}" />
-        <div class="card">{{ item.name }}</div>
-      </div>
+  <div class="overlay">
+    <h2>
+      {{ "LABLE_BEM_VINDO" | translate }} {{ "LABLE_AO" | translate }}
+      {{ "LABLE_APP_NAME" | translate }}
+    </h2>
+    <h3>Sua vida mais simples e organizada começa aqui.</h3>
+    <p>
+      No BeaverFix, unimos você aos melhores profissionais especializados em
+      serviços domésticos. Oferecemos praticidade, segurança e qualidade em cada
+      solução.
+    </p>
+  </div>
+  <!-- <section> -->
+  <img
+    src="assets/images/Ondulacao.jpg"
+    alt="Ondulação"
+    class="background-image"
+  />
+  <div class="carousel" #carousel>
+    <div
+      class="carousel-item"
+      *ngFor="let item of carouselItems; let i = index"
+    >
+      <img [src]="'assets/icons/' + item.image" alt="{{ item.name }}" />
+      <div class="card">{{ item.name }}</div>
     </div>
-    <div class="carousel-dots">
-      <span
-        *ngFor="let item of carouselItems; let i = index"
-        [class.active]="i === activeIndex"
-        (click)="setActiveIndex(i)"
-      ></span>
-    </div>
-    <button class="custom-button" (click)="showAlert()">
-      <img src="assets/icons/login.png" alt="Login" (click)="showAlert()" />
-      <span>{{ "login" | translate }}</span>
-    </button>
-  </section>
+  </div>
+  <div class="carousel-dots">
+    <span
+      *ngFor="let item of carouselItems; let i = index"
+      [class.active]="i === activeIndex"
+      (click)="setActiveIndex(i)"
+    ></span>
+  </div>
+  <button class="custom-button" (click)="showAlert()">
+    <img src="assets/icons/login.png" alt="Login" (click)="showAlert()" />
+    <span>{{ "login" | translate }}</span>
+  </button>
+  <!-- </section> -->
 </div>
