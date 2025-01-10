@@ -124,10 +124,10 @@ button {
   font-size: 16px;
   cursor: pointer;
   transition: all 0.3s ease;
-  margin: 20px auto; // Centraliza o botão horizontalmente
+  margin: 50px auto; // Aumentado de 20px para 50px
   gap: 10px;
   box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
-  width: 300px; // Aumenta a largura do botão
+  width: 90%; // Aumenta a largura do botão
   min-width: fit-content;
 
   img {
@@ -183,8 +183,8 @@ button {
   max-width: 100%; // Garantir que a largura não ultrapasse a largura da classe .main-content
   justify-content: center;
   gap: 10px;
-  padding-top: 90px;
-  padding-bottom: 10px;
+  padding-top: 170px;
+  padding-bottom: 1px;
 }
 
 .carousel-item {
@@ -221,7 +221,7 @@ button {
   display: flex;
   justify-content: center;
   gap: 10px;
-  margin: 20px 0;
+  // margin: 20px 0;
 }
 
 .carousel-dots span {
