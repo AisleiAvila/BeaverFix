@@ -1,3 +1,14 @@
+<div class="overlay">
+  <h2>
+    {{ "LABLE_BEM_VINDO" | translate }} {{ "LABLE_AO" | translate }}
+    {{ "LABLE_APP_NAME" | translate }}
+  </h2>
+  <p>Sua vida mais simples e organizada começa aqui.</p>
+  <p>
+    No BeaverFix, conectamos você aos melhores profissionais de serviços
+    domésticos e especializados, com praticidade, segurança e qualidade.
+  </p>
+</div>
 <div class="main-content">
   <section>
     <img
@@ -5,14 +16,6 @@
       alt="Ondulação"
       class="background-image"
     />
-    <div class="overlay">
-      <h2>Welcome to BeaverFix</h2>
-      <p>Sua vida mais simples e organizada começa aqui.</p>
-      <p>
-        No BeaverFix, conectamos você aos melhores profissionais de serviços
-        domésticos e especializados, com praticidade, segurança e qualidade.
-      </p>
-    </div>
     <div class="carousel" #carousel>
       <div
         class="carousel-item"
@@ -29,9 +32,9 @@
         (click)="setActiveIndex(i)"
       ></span>
     </div>
-    <div class="login-container">
-      <img src="assets/icons/login.jpg" alt="Login" (click)="showAlert()" />
-      <p (click)="showAlert()">Login</p>
-    </div>
+    <button class="custom-button" (click)="showAlert()">
+      <img src="assets/icons/login.png" alt="Login" (click)="showAlert()" />
+      <span>{{ "login" | translate }}</span>
+    </button>
   </section>
 </div>

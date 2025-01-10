@@ -1,13 +1,14 @@
 import { CommonModule } from '@angular/common';
 import { Component, OnInit, ViewChild, ElementRef } from '@angular/core';
 import { Router, RouterModule } from '@angular/router';
+import { TranslateModule } from '@ngx-translate/core';
 
 @Component({
   selector: 'app-home',
   templateUrl: './home.component.html',
   styleUrls: ['./home.component.scss'],
   standalone: true,
-  imports: [CommonModule, RouterModule],
+  imports: [CommonModule, RouterModule, TranslateModule],
 })
 export class HomeComponent implements OnInit {
   @ViewChild('carousel', { static: false }) carousel!: ElementRef;
@@ -34,14 +35,7 @@ export class HomeComponent implements OnInit {
   }
 
   showAlert() {
-    this.router
-      .navigate(['/login'])
-      .then(() => {
-        console.log('Navegação para login bem-sucedida');
-      })
-      .catch((err) => {
-        console.error('Erro na navegação:', err);
-      });
+    alert('Funcionalidade em desenvolvimento');
   }
 
   setActiveIndex(index: number) {

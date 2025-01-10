@@ -1,3 +1,23 @@
 <div class="header">
   <img src="assets/images/Logotipo.svg" alt="Logotipo BeaverFix" />
+  <div class="language-icons">
+    <img
+      src="assets/icons/brazil-flag-icon.svg"
+      alt="Português"
+      title="Português"
+      class="flag-icon"
+      tabindex="0"
+      (click)="changeLanguage('pt')"
+      (keydown.enter)="changeLanguage('pt')"
+    />
+    <img
+      src="assets/icons/united-kingdom-flag-icon.svg"
+      alt="English"
+      title="English"
+      class="flag-icon"
+      tabindex="0"
+      (click)="changeLanguage('en')"
+      (keydown.enter)="changeLanguage('en')"
+    />
+  </div>
 </div>
